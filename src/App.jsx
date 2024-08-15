@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Products from './pages/Products';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 
 const App = () => {
@@ -12,8 +13,9 @@ const App = () => {
         <Header />
         <main className="flex-grow container mx-auto px-4">
           <Routes>
-            <Route exact path="/" element={<Products />} />
-            <Route path="/products" element={<Products />} />
+            <Route exact path="/" element={<Product />} />
+            <Route path="/products" element={<Product />} />
+            <Route path="/cart" element={<Cart />} />
             
           </Routes>
         </main>
