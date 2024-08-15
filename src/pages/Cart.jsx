@@ -6,9 +6,13 @@ const Cart = () => {
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
+  const cartItemCount = cart.length;
+
   return (
     <div className="container mx-auto mt-4">
-      <h2 className="text-center mb-4">Your Cart</h2>
+      <h2 className="text-center mb-4">
+        Your Cart ({cartItemCount})
+      </h2>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
