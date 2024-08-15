@@ -1,8 +1,67 @@
-# React + Vite
+# E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies
+1.**React.js** (Frontend UI)
 
-Currently, two official plugins are available:
+2.**Libraries**:
+    
+   a) **UI kit**- **Tailwind CSS**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   b) ***Redux Toolkit***
+
+
+## System Requirements
+
+To get started with development, you need to install few tools
+
+1. **git** 
+
+   To check your version of git, run:
+
+   ```shell
+    git --version
+   ```
+2. **node** 
+
+    To check your version of node, run:
+
+    ```shell
+    node --version
+    ```
+
+3. **npm**
+
+    To check your version of npm, run:
+
+     ```shell
+     npm --version
+     ```
+
+
+## Setup
+To set up a development environment, please follow these steps:
+
+1. Clone the repo
+
+   ```shell
+    git clone https://github.com/priyans619/E-commerce-UI
+   ```
+
+2. Change directory to the project directory
+
+    ```shell
+    cd E-commerce-Shopcart-UI
+    ```
+
+3. Install the dependencies
+   
+     ```shell
+     npm install
+      ```
+4. Run the app
+   
+    ```shell
+    npm run dev
+    ```
+
+ Project will be running in the browser.
