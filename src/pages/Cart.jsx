@@ -13,12 +13,18 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         cart.map(item => (
-          <div key={item.id} className="border p-4 mb-4 rounded-lg">
+          <div key={item.id} className="border p-4 mb-4 rounded-lg flex items-center">
+          <div className="flex-grow">
             <h3 className="text-xl font-bold">{item.title}</h3>
             <p>${item.price}</p>
-            <button onClick={() => dispatch(removeFromCart(item))} className="bg-red-600 text-white p-2 rounded">
-              Remove
+            <button
+              onClick={() => dispatch(removeFromCart(item))}
+              className="bg-red-600 text-white py-1 px-2 rounded mt-2"
+            >
+              Remove item
             </button>
+          </div>
+          <img src={item.thumbnail} alt={item.title} className="bg-gray-200 w-32 h-32 object-cover rounded ml-4" />
           </div>
         ))
       )}
