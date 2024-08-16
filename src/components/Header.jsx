@@ -10,10 +10,10 @@ const Header = () => {
           <img src={logo} alt="E-commerce" className="h-7 sm:h-8 md:h-10 lg:h-12" />
         </Link>
         <nav>
-          <Link to="/" className="text-white mx-3">Home</Link>
-          <Link to="/" className="text-white mx-3">Products</Link>
-          <Link to="/" className="text-white mx-3">Cart</Link>
-          <Link to="/" className="text-white mx-3">Account</Link>
+          <Link to="/" className="text-black text-xl mx-3">Home</Link>
+          <Link to="/" className="text-black text-xl mx-3">Products</Link>
+          <Link to="/" className="text-black text-xl mx-3">Cart</Link>
+          <Link to="/" className="text-black text-xl mx-3">Account</Link>
         </nav>
       </div>
     </header>
