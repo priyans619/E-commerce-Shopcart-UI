@@ -7,10 +7,10 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const cartItemCount = cart.length; //CartCount
-  const conversionRate = 82; //conversion rate from USD to INR
+  const conversionRate = 82; //conversion USD to INR
 
   return (
-    <div className="container mx-auto mt-24">
+    <div className="container mx-auto mt-24 lg:px-24 md:px-12 sm:px-4">
       <h2 className="text-center mb-4">
         Your Cart ({cartItemCount})
       </h2>
