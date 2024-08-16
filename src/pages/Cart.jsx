@@ -9,7 +9,7 @@ const Cart = () => {
   const cartItemCount = cart.length;
 
   return (
-    <div className="container mx-auto mt-4">
+    <div className="container mx-auto mt-24">
       <h2 className="text-center mb-4">
         Your Cart ({cartItemCount})
       </h2>
@@ -17,18 +17,18 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         cart.map(item => (
-          <div key={item.id} className="border p-4 mb-4 rounded-lg flex items-center">
-          <div className="flex-grow">
-            <h3 className="text-xl font-bold">{item.title}</h3>
-            <p>${item.price}</p>
-            <button
-              onClick={() => dispatch(removeFromCart(item))}
-              className="bg-red-600 text-white py-1 px-2 rounded mt-2"
-            >
-              Remove item
-            </button>
-          </div>
-          <img src={item.thumbnail} alt={item.title} className="bg-gray-200 w-32 h-32 object-cover rounded ml-4" />
+          <div key={item.id} className="border p-4 mb-4 rounded-lg flex items-center shadow-md ">
+            <div className="flex-grow">
+              <h3 className="text-xl font-bold">{item.title}</h3>
+              <p>${item.price}</p>
+              <button
+                onClick={() => dispatch(removeFromCart(item))}
+                className="bg-red-400 text-white py-1 px-2 rounded mt-2"
+              >
+                Remove item
+              </button>
+            </div>
+            <img src={item.thumbnail} alt={item.title} className="bg-gray-200 w-32 h-32 object-cover rounded ml-4" />
           </div>
         ))
       )}
