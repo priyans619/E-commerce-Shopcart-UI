@@ -1,5 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaHome, FaShoppingCart } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -9,15 +10,17 @@ const Header = () => {
         <Link to="/">
           <img src={logo} alt="E-commerce" className="h-7 sm:h-8 md:h-10 lg:h-12" />
         </Link>
-        <nav>
-          <Link to="/" className="text-black text-xl mx-3">Home</Link>
-          <Link to="/products" className="text-black text-xl mx-3">Products</Link>
-          <Link to="/cart" className="text-black text-xl mx-3">Cart</Link>
-          <Link to="/" className="text-black text-xl mx-3">Account</Link>
+        <nav className="flex items-center">
+          <Link to="/products" className="text-black text-xl mx-3 flex items-center">
+            <FaHome className="mr-2" /> Home
+          </Link>
+          <Link to="/cart" className="text-black text-xl mx-3 flex items-center">
+            <FaShoppingCart className="mr-2" /> Cart
+          </Link>
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
