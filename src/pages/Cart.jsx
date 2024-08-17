@@ -22,7 +22,7 @@ const Cart = () => {
   const totalPrice = cart.reduce((sum, item, index) => sum + item.price * 82 * quantities[index], 0);
 
   return (
-    <div className="container mx-auto mt-20 lg:px-24 md:px-12 sm:px-4 bg-white">
+    <div className="container mx-auto mt-20 lg:px-24 md:px-12 sm:px-4 bg-slate-100">
       <h2 className=" mb-4">
         Your Cart ({cart.length})
       </h2>
