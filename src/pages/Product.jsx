@@ -44,7 +44,7 @@ const Products = () => {
           <button
             key={index + 1}
             onClick={() => handlePageChange(index + 1)}
-            className={`mx-1 px-4 py-2 border rounded ${currentPage === index + 1 ? 'bg-gray-700 text-white' : 'bg-white text-gray-700'}`}
+            className={`mx-1 mb-4 px-4 py-2 border rounded ${currentPage === index + 1 ? 'bg-gray-700 text-white' : 'bg-white text-gray-700'}`}
           >
             {index + 1}
           </button>
