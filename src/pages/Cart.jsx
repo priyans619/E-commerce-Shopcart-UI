@@ -30,34 +30,34 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         cart.map((item, index) => (
-          <div key={item.id} className="border p-4 mb-4 rounded-lg flex items-center shadow-md">
-            <div className="flex-grow ">
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p>₹{(item.price * conversionRate * quantities[index]).toFixed(2)}</p>
-              <button
-                onClick={() => dispatch(removeFromCart(item))}
-                className="bg-red-400 text-white py-1 px-2 rounded mt-2"
-              >
-                Remove item
-              </button>
-            </div>
-            <div className="flex flex-col items-center ml-4">
+          <div key={item.id} className="border p-4 mb-4 flex items-center shadow-lg">
+            <div className="flex-grow ml-2">
               <img src={item.thumbnail} alt={item.title} className="bg-gray-200 w-24 h-24 object-cover rounded" />
               <div className="flex items-center mt-4">
                 <button
                   onClick={() => handleQuantityChange(index, -1)}
-                  className="bg-gray-300 rounded-full p-1"
+                  className="bg-gray-200 rounded-full p-1"
                 >
                   <AiOutlineMinus />
                 </button>
-                <span className="mx-2 border border-gray-300 px-5 rounded">{quantities[index]}</span>
+                <span className="mx-2 border border-gray-300 px-4 rounded">{quantities[index]}</span>
                 <button
                   onClick={() => handleQuantityChange(index, 1)}
-                  className="bg-gray-300 rounded-full p-1"
+                  className="bg-gray-200 rounded-full p-1"
                 >
                   <AiOutlinePlus />
                 </button>
               </div>
+            </div>
+            <div className="flex flex-col items-end ml-4">
+              <h3 className="text-xl font-normal">{item.title}</h3>
+              <p className='font-bold mt-2'>₹{(item.price * conversionRate * quantities[index]).toFixed(2)}</p>
+              <button
+                onClick={() => dispatch(removeFromCart(item))}
+                className="border shadow-md border-b-gray-500 bg-gray-200 py-1 px-2 rounded mt-12"
+              >
+                Remove item
+              </button>
             </div>
           </div>
         ))
