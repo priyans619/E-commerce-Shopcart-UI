@@ -22,12 +22,12 @@ const Cart = () => {
   const totalPrice = cart.reduce((sum, item, index) => sum + item.price * 82 * quantities[index], 0);
 
   return (
-    <div className="container mx-auto mt-24 lg:px-24 md:px-12 sm:px-4">
-      <h2 className="text-center mb-4">
+    <div className="container mx-auto mt-20 lg:px-24 md:px-12 sm:px-4 bg-white">
+      <h2 className=" mb-4">
         Your Cart ({cart.length})
       </h2>
       {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className='text-center'>Your cart is empty.</p>
       ) : (
         <>
           {cart.map((item, index) => (
@@ -40,6 +40,10 @@ const Cart = () => {
             />
           ))}
           <CartDetails totalItems={totalItems} totalPrice={totalPrice} />
+          <button className="bg-blue-100 hover:bg-blue-300 text-black text-xl font-medium mb-4 py-2 px-16 rounded-md text-center mx-auto block">
+            Checkout
+          </button>
+
         </>
       )}
     </div>
