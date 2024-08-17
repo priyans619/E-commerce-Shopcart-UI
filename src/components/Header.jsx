@@ -12,10 +12,10 @@ const Header = () => {
         </Link>
         <nav className="flex items-center">
           <Link to="/products" className="text-black text-xl mx-3 flex items-center">
-            <FaHome className="mr-2" /> Home
+            <FaHome className="mr-2 text-blue-900" /> Home
           </Link>
           <Link to="/cart" className="text-black text-xl mx-3 flex items-center">
-            <FaShoppingCart className="mr-2" /> Cart
+            <FaShoppingCart className="mr-2 text-blue-900" /> Cart
           </Link>
         </nav>
       </div>
