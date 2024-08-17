@@ -11,7 +11,7 @@ const CartDetails = ({ totalItems, totalPrice }) => {
       <hr className="my-4" />
       <div className="mt-4 space-y-2">
         <div className="flex justify-between">
-          <p>Price ({totalItems} items):</p>
+          <p>Subtotal ({totalItems} items):</p>
           <p>₹{totalPrice.toFixed(2)}</p>
         </div>
         <div className="flex justify-between">
@@ -24,7 +24,7 @@ const CartDetails = ({ totalItems, totalPrice }) => {
         </div>
         <hr className="my-4" />
         <div className="flex justify-between text-lg font-medium py-1">
-          <p>Total Amount:</p>
+          <p>Total Price:</p>
           <p>₹{finalAmount.toFixed(2)}</p>
         </div>
         <hr className="my-4" />
