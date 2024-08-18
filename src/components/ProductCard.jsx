@@ -15,6 +15,7 @@ const ProductCard = ({ product }) => {
     if (!isAdded) {
       dispatch(addToCart(product));
       setIsAdded(true);
+      setShowSparkle(true); //sparkle show
     }
   };
 
