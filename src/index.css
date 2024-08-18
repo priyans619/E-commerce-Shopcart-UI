@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sparkle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle-icon {
+  position: absolute;
+  animation: sparkle 1s ease-out forwards;
+  color: #87a7ed;
+  font-size: 1.5rem;
+}
+
+.sparkle-icon:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+
+.sparkle-icon:nth-child(2) {
+  top: 30%;
+  left: 70%;
+}
+
+.sparkle-icon:nth-child(3) {
+  top: 60%;
+  left: 40%;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+/* Define the animation for the button */
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.sparkle {
+  animation: hoverEffect 1s ease-out forwards;
+}
