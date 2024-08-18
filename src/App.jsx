@@ -9,7 +9,7 @@ import Cart from './pages/Cart';
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-slate-100">
         <Header />
         <main className="flex-grow container mx-auto px-4">
           <Routes>
